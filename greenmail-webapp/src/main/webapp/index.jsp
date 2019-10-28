@@ -84,7 +84,7 @@ if( managers != null ) {
 			 }
 			
 			 %>
-			 <tr><td><%=greenMailUser.getLogin()%><td><a class="btn btn-primary btn-lg"  class="btn btn-lg btn-primary"  href="messages.jsp?mailbox=<%=greenMailUser.getLogin()%>">View Mailbox</a></td></td><td><%=greenMailUser.getEmail()%></td><td><%=greenMailUser.getPassword()%></td><td><%=messageCount%></td></tr>
+			 <tr><td><%=greenMailUser.getLogin()%><td><a class="btn btn-primary btn-lg"  class="btn btn-lg btn-primary"  href="messages.jsp?mailbox=<%= java.net.URLEncoder.encode( greenMailUser.getLogin(), "UTF-8" ) %>">View Mailbox</a></td></td><td><%=greenMailUser.getEmail()%></td><td><%=greenMailUser.getPassword()%></td><td><%=messageCount%></td></tr>
 			 <%	 
 		 }
 		 %>

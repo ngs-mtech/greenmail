@@ -86,7 +86,7 @@ public class ImapHostManagerImpl
      */
     @Override
     public MailFolder getInbox(GreenMailUser user) throws FolderException {
-        return getFolder(user, INBOX_NAME);
+        return getFolder(user, INBOX_NAME, true);
     }
 
     /**

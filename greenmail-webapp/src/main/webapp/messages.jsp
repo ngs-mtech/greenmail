@@ -57,7 +57,7 @@ if( managers != null ) {
 				 		javax.mail.Address[] recipients = message.getMimeMessage().getAllRecipients();
 				 		
 						 %>
-						 <tr><td><%=from[0].toString()%></td><td><a href="message.jsp?mailbox=<%=greenMailUser.getLogin()%>&messageId=<%=message.getUid()%>"><%=subject%> </a></td><td><%= receivedDate%></td>
+						 <tr><td><%=from[0].toString()%></td><td><a href="message.jsp?mailbox=<%= java.net.URLEncoder.encode( greenMailUser.getLogin(), "UTF-8" ) %>&messageId=<%=message.getUid()%>"><%=subject%> </a></td><td><%= receivedDate%></td>
 						 <td><%
 							for( int i = 0; i < recipients.length; i++ ){
 								javax.mail.Address address = recipients[i]; 
